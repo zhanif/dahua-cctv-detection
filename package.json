@@ -1,0 +1,20 @@
+{
+  "name": "dahua-cctv-detection",
+  "version": "1.0.0",
+  "description": "Implementation of CCTV detection for Dahua Technology",
+  "main": "index.js",
+  "author": "zhanif",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "keypather": "^3.0.0",
+    "moment": "^2.29.4",
+    "net-keepalive": "^3.0.0",
+    "path": "^0.12.7",
+    "request": "^2.85.0",
+    "request-progress": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0"
+  }
+}
