@@ -18,3 +18,7 @@ dahua.on('connect', () => {
 dahua.on('error', (error) => {
   console.log(error)
 })
+
+dahua.on('alarm', (code, action, index) => {
+  console.log(`code: ${code}\naction: ${action}\ncctv: ${index} (CAM ${parseInt(index) + 1})`);
+});
