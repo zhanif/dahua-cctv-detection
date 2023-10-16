@@ -1,6 +1,6 @@
 // Dahua HTTP API Module
 // https://github.com/nayrnet/node-dahua-api
-
+require('dotenv').config()
 var events    = require('events');
 var util      = require('util');
 var request   = require('request');
