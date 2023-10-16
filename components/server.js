@@ -6,7 +6,7 @@ module.exports = class Server {
   constructor(event) {
     this.event = event
 
-    wss.on('connection', (ws, request, client) => {
+    wss.on('connection', (ws, request) => {
       ws.on('error', (err) => {
         console.error(`[server] error: ${err}`);
       })
@@ -14,16 +14,16 @@ module.exports = class Server {
       //   console.log(`[] (${client}) send ${data}`);
       // })  
       this.event.on('alarm', (data) => {
-        this.handleAlarm(ws, data)
+        this.handleNotification(ws, data)
       })
     })
 
   }
 
-  handleAlarm(ws, data) {
+  handleNotification(ws, data) {
     console.log('[server] data sent!');
     console.log(data);
 
-    ws.send("hello")
+    ws.send(JSON.stringify(data))
   }
 }
