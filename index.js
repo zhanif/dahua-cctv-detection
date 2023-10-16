@@ -1,9 +1,9 @@
 require('dotenv').config();
 const Camera = require('./components/camera')
-const Broker = require('./components/broker')
+const Server = require('./components/server')
 const { EventEmitter } = require('events')
 
 const eventEmitter = new EventEmitter()
 
 const camera = new Camera(eventEmitter)
-const broker = new Broker(eventEmitter)
+const server = new Server(eventEmitter)

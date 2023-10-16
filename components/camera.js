@@ -23,9 +23,10 @@ module.exports = class Camera {
 
     this.dahua.on('alarm', (code, action, index) => {
       this.event.emit('alarm', {
+        topic_id: process.env.DAHUA_TOPIC,
+        cctv_id: parseInt(index) + 1,
         code: code,
         action: action,
-        cctv: parseInt(index) + 1
       })
     })
   }
