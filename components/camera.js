@@ -27,6 +27,7 @@ module.exports = class Camera {
         cctv_id: parseInt(index) + 1,
         code: code,
         action: action,
+        time: new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta'})
       })
     })
   }
